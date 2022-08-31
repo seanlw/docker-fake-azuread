@@ -1,6 +1,6 @@
 # Docker Fake Azure AD
 
-Docker container that is used in development to memic Azure AD SAML authentication. This is for development and testing ONLY. This should not be put into production.
+Docker container that is used in development to mimic Azure AD SAML authentication. This is for development and testing ONLY. This should not be put into production.
 
 Based on [docker-simplesamlphp](https://github.com/kenchan0130/docker-simplesamlphp)
 
