@@ -10,14 +10,16 @@ $test_user_base = array(
   'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress' => '',
   'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname' => '',
   'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname' => '',
-  'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name' => ''
+  'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name' => '',
+  'urn:oid:0.9.2342.19200300.100.1.1' => '',
+  'urn:oid:0.9.2342.19200300.100.1.3' => ''
 );
 
 $config = array(
   'admin' => array(
     'core:AdminPassword',
   ),
-  'userpass' => array(
+  'example-userpass' => array(
     'exampleauth:UserPass',
     'doej:password' => array_merge($test_user_base, array(
       'http://schemas.microsoft.com/identity/claims/objectidentifier' => 'f2d75402-e1ae-40fe-8cc9-98ca1ab9cd5e',
@@ -25,15 +27,19 @@ $config = array(
       'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress' => 'doej@fakester.com',
       'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname' => 'John',
       'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname' => 'Doe',
-      'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name' => 'doej@fakester.com'
+      'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name' => 'doej',
+      'urn:oid:0.9.2342.19200300.100.1.1' => 'doej',
+      'urn:oid:0.9.2342.19200300.100.1.3' => 'doej@fakester.com'
     )),
     'smithj:password' => array_merge($test_user_base, array(
       'http://schemas.microsoft.com/identity/claims/objectidentifier' => 'f2a94916-2fcb-4b68-9eb1-5436309006a3',
-      'http://schemas.microsoft.com/identity/claims/displayname' => 'John Smith',
+      'http://schemas.microsoft.com/identity/claims/displayname' => 'Jane Smith',
       'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress' => 'smithj@fakester.com',
-      'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname' => 'John',
+      'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname' => 'Jane',
       'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname' => 'Smith',
-      'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name' => 'smithj@fakester.com'
-    )),
+      'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name' => 'smithj',
+      'urn:oid:0.9.2342.19200300.100.1.1' => 'smithj',
+      'urn:oid:0.9.2342.19200300.100.1.3' => 'smithj@fakester.com'
+    ))
   ),
 );
